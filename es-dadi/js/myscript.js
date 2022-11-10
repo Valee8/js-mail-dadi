@@ -14,12 +14,16 @@ console.log("Numero giocatore: ", numGiocatore);
 
 console.log("Numero computer: ", numComputer);
 
+// Variabile che contiene il risultato
+let risultato = "Pareggio";
+
+// Controllo chi ha vinto
 if (numComputer > numGiocatore) {
-    document.getElementById("risultato").innerHTML = "Ha vinto il computer";
+    risultato = "Ha vinto il computer";
 }
 else if (numGiocatore > numComputer) {
-    document.getElementById("risultato").innerHTML = "Ha vinto il giocatore";
+    risultato = "Ha vinto il giocatore";
 }
-else {
-    document.getElementById("risultato").innerHTML = "Pareggio";
-}
+
+// Stampo il risultato
+document.getElementById("risultato").innerHTML = risultato;
