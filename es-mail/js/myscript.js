@@ -31,4 +31,3 @@ for ( let i = 0; i < numInvitati; i++) {
     document.getElementById("messaggio").innerHTML = messaggio;
 
 }
-
