@@ -4,26 +4,39 @@ sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
 
+const buttonPlay = document.getElementById("lancio-dadi");
+
 // Numero giocatore da 1 a 6
 const numGiocatore = Math.floor(Math.random() * 6) + 1;
 
 // Numero computer da 1 a 6
 const numComputer = Math.floor(Math.random() * 6) + 1;
 
-console.log("Numero giocatore: ", numGiocatore);
+buttonPlay.addEventListener("click",
 
-console.log("Numero computer: ", numComputer);
+    function() {
 
-// Variabile che contiene il risultato
-let risultato = "Pareggio";
+        console.log("Numero giocatore: ", numGiocatore);
 
-// Controllo chi ha vinto
-if (numComputer > numGiocatore) {
-    risultato = "Ha vinto il computer";
-}
-else if (numGiocatore > numComputer) {
-    risultato = "Ha vinto il giocatore";
-}
+        console.log("Numero computer: ", numComputer);
 
-// Stampo il risultato
-document.getElementById("risultato").innerHTML = risultato;
+        // Variabile che contiene il risultato
+        let vincitore = "Pareggio";
+
+        // Controllo chi ha vinto
+        if (numComputer > numGiocatore) {
+            vincitore = "Ha vinto il computer";
+        }
+        else if (numGiocatore > numComputer) {
+            vincitore = "Ha vinto il giocatore";
+        }
+
+        // Stampo il risultato
+        document.getElementById("dado-giocatore").innerHTML = `Il giocatore ha ottenuto ${numGiocatore}`;
+
+        document.getElementById("dado-computer").innerHTML = `Il giocatore ha ottenuto ${numComputer}`;
+
+        document.getElementById("vincitore").innerHTML = vincitore;
+    }
+
+);
