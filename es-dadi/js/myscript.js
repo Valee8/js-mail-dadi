@@ -34,7 +34,7 @@ buttonPlay.addEventListener("click",
         // Stampo il risultato
         document.getElementById("dado-giocatore").innerHTML = `Il giocatore ha ottenuto ${numGiocatore}`;
 
-        document.getElementById("dado-computer").innerHTML = `Il giocatore ha ottenuto ${numComputer}`;
+        document.getElementById("dado-computer").innerHTML = `Il computer ha ottenuto ${numComputer}`;
 
         document.getElementById("vincitore").innerHTML = vincitore;
     }
